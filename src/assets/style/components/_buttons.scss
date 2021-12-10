@@ -1,0 +1,58 @@
+.btn {
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 45px;
+  display: inline-block;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+
+  @include maxMdScreen {
+    font-size: 14px;
+  }
+
+  &::after {
+    content: "";
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: -200%;
+    height: 200%;
+    transition: all .5s;
+    background: rgba(#fff, .2);
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+
+    &::after {
+      left: 100%;
+    }
+  }
+
+  &--purple {
+    background: $mainColor;
+    color: $yellowColor;
+  }
+  &--arrow {
+    svg {
+      stroke-opacity: .5;
+      animation: move .5s forwards infinite;
+      margin-right: 12px;
+    }
+  }
+}
+
+@keyframes move {
+  from {
+    stroke: #fff;
+    transform: scale(.8);
+  }
+  to {
+    stroke: none;
+  }
+}

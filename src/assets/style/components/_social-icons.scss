@@ -1,0 +1,13 @@
+.social-icons {
+  list-style: none;
+
+  li a {
+    svg {
+      fill: #fff
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

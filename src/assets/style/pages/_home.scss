@@ -1,0 +1,138 @@
+// banner-section
+.banner-section {
+  &__title {
+    font-size: 36px;
+    color: $mainColor;
+    font-weight: bold;
+    line-height: 64px;
+    margin-bottom: 20px;
+    @include maxMdScreen {
+      font-size: 25px;
+      line-height: 45px;
+    }
+  }
+  &__desc {
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 512px;
+    margin: auto;
+    line-height: 33px;
+    margin-bottom: 50px;
+    @include maxMdScreen {
+      font-size: 16px;
+    }
+  }
+}
+
+// features
+.features {
+  background: $lightGray;
+  @include maxSmScreen {
+    text-align: center;
+  }
+  &__info {
+    @include minLgScreen {
+      min-width: 558px;
+    }
+    @include maxMdScreen {
+      width: 100%;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: $mainColor;
+    margin-bottom: 20px;
+    @include maxMdScreen {
+      font-size: 22px;
+    }
+  }
+  &__desc {
+    font-weight: 500;
+    @include maxMdScreen {
+      font-size: 14px;
+    }
+  }
+  &__list {
+    list-style: none;
+    margin: 25px 0 40px;
+    font-weight: 500;
+    &__item {
+      font-size: 14px;
+      margin-bottom: 25px;
+      @include maxSmScreen {
+        background: #fff;
+        flex-direction: column;
+        max-width: 300px;
+        margin: 15px auto 0;
+        padding: 18px;
+        gap: 18px;
+        box-shadow: 0 0 5px rgba(#000, .1);
+      }
+      &__img {
+        filter: drop-shadow(0px 4px 7px rgba(0, 0, 0, 0.25));
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+// special-apps
+.special-apps {
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  &__desc {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &__row {
+    gap: 20px;
+  }
+  .card {
+    background: $grayColor;
+    padding: 29px 20px;
+    width: 294px;
+    max-width: 100%;
+    font-size: 10px;
+    font-weight: 500;
+    @include minSmScreen {
+      min-width: 294px;
+    }
+
+    &__img {
+      min-width: 44px;
+      width: 44px;
+      img {
+        border-radius: 10px;
+      }
+    }
+    &__title {
+      color: $mainColor;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    &__rating {
+      color: $greenColor;
+      strong {
+        font-size: 18px;
+      }
+      &__icon {
+        color: $goldColor;
+        font-size: 23px;
+        line-height: 1;
+      }
+    }
+  }
+  &__btn-wrapper {
+    button {
+      background: transparent;
+      font-size: 16px;
+    }
+  }
+
+}

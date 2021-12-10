@@ -1,0 +1,23 @@
+.footer {
+  background: $mainColor;
+  padding-bottom: 60px;
+  .scroll-top-icon, .chat-icon {
+    position: fixed;
+    bottom: 25px;
+    z-index: 99;
+    transition: all .3s;
+    border-radius: 50%;
+    &:hover {
+      box-shadow: 0 0 5px rgba($mainColor, .5);
+    }
+  }
+  .scroll-top-icon {
+    left: -200px;
+    &.show {
+      left: 20px;
+    }
+  }
+  .chat-icon {
+    right: 20px;
+  }
+}
